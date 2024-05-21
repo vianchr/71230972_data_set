@@ -1,0 +1,5 @@
+Ciri lain dari sebuah flat files adalah bentuk datanya yang memiliki baris dan kolom. Baris pertama biasanya merupakan label atau disebut header, atau disebut juga nama kolom yang mewakili isi data dari baris kedua sampai akhir. 
+
+Apabila kita membaca jenis data ini, akan sangat sulit apabila kita memiliki jumlah baris yang banyak, karena panjang karakter yang berbeda-beda, dan kita perlu mencari data tersebut berada di kolom yang mana. 
+
+Oleh karena itu, Python memiliki fitur untuk Dapat membuka sebuah file.  

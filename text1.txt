@@ -1,0 +1,3 @@
+alam aplikasinya, data dapat dikategorikan berdasarkan struktur bentuknya, yaitu structured data atau data terstruktur, unstructured data atau data tidak terstruktur, dan semi-structured data atau data semi-terstruktur. 
+
+Structured data merupakan jenis data yang format penulisannya mengikuti kaidah yang telah ditentukan dan mudah untuk dibaca oleh baik mesin maupun manusia. Bentuk seperti ini sering kita jumpai pada flat files
