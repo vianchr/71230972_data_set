@@ -1,0 +1,65 @@
+Fungsi ini open()mengembalikan objek file yang memiliki dua metode berguna untuk menulis teks ke file: write()dan writelines().
+
+Metode ini write()menulis string ke file teks.
+Metode ini writelines()menulis daftar string ke file sekaligus.
+Metode ini writelines()menerima objek yang dapat diubah , bukan hanya list , sehingga Anda dapat meneruskan serangkaian string, sekumpulan string, dll., ke writelines()metode tersebut.
+
+Untuk menulis baris ke file teks, Anda perlu menambahkan karakter baris baru secara manual:
+
+f.write('\n')
+f.writelines('\n')
+Bahasa kode:  JavaScript  ( javascript )
+Contoh penulisan file teks
+Contoh berikut menunjukkan cara menggunakan write()fungsi untuk menulis daftar teks ke file teks:
+
+lines = ['Readme', 'How to write text files in Python']
+with open('readme.txt', 'w') as f:
+    for line in lines:
+        f.write(line)
+        f.write('\n')
+Bahasa kode:  JavaScript  ( javascript )
+Jika file readme.txt tidak ada, open()fungsi akan membuat file baru.
+
+
+Berikut ini menunjukkan cara menulis daftar string teks ke file teks:
+
+lines = ['Readme', 'How to write text files in Python']
+with open('readme.txt', 'w') as f:
+    f.writelines(lines)
+Bahasa kode:  JavaScript  ( javascript )
+Jika Anda memperlakukan setiap elemen daftar sebagai sebuah baris, Anda perlu menggabungkannya dengan karakter baris baru seperti ini:
+
+lines = ['Readme', 'How to write text files in Python']
+with open('readme.txt', 'w') as f:
+    f.write('\n'.join(lines))
+Bahasa kode:  JavaScript  ( javascript )
+
+Menambahkan file teks
+Untuk menambahkan ke file teks, Anda perlu membuka file teks untuk mode penambahan. Contoh berikut menambahkan baris baru ke readme.txtfile:
+
+more_lines = ['', 'Append text files', 'The End']
+
+with open('readme.txt', 'a') as f:
+    f.write('\n'.join(more_lines))
+Bahasa kode:  JavaScript  ( javascript )
+Keluaran:
+
+
+Menulis ke file teks UTF-8
+Jika Anda menulis karakter UTF-8 ke file teks menggunakan kode dari contoh sebelumnya, Anda akan mendapatkan kesalahan seperti ini:
+
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-44: character maps to <undefined>
+Bahasa kode:  HTML, XML  ( xml )
+Untuk membuka file dan menulis karakter UTF-8 ke file, Anda perlu meneruskan encoding='utf-8'parameter ke open()fungsi.
+
+Contoh berikut menunjukkan cara menulis karakter UTF-8 ke file teks:
+
+
+quote = '成功を収める人とは人が投げてきたレンガでしっかりした基盤を築くことができる人のことである。'
+
+with open('quotes.txt', 'w', encoding='utf-8') as f:
+    f.write(quote)
+Bahasa kode:  JavaScript  ( javascript )
+Ringkasan
+Gunakan open()fungsi dengan mode watau auntuk membuka file teks untuk ditambahkan.
+Selalu tutup file setelah selesai p

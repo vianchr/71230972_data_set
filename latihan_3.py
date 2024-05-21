@@ -9,7 +9,7 @@ def cek_2_file():
     except:
         print(f"File '{file1}' tidak ditemukan.")
     
-    file2 = input("Masukkan nama file pertama: ")
+    file2 = input("Masukkan nama file kedua: ")
     try:
         with open(file2, 'r') as file:
             isi = file.read()
